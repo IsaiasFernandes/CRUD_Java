@@ -21,8 +21,7 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String nome;
-	
-	@JsonManagedReference
+
 	@ManyToOne
 	@JoinColumn(name="estado_id")
 	private Estado estado;
