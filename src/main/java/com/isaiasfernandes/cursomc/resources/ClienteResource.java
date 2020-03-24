@@ -1,14 +1,13 @@
 package com.isaiasfernandes.cursomc.resources;
 
+import com.isaiasfernandes.cursomc.domain.Cliente;
 import com.isaiasfernandes.cursomc.dto.ClienteDTO;
 import com.isaiasfernandes.cursomc.dto.ClienteNewDTO;
+import com.isaiasfernandes.cursomc.services.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import com.isaiasfernandes.cursomc.domain.Cliente;
-import com.isaiasfernandes.cursomc.services.ClienteService;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.validation.Valid;

@@ -1,10 +1,10 @@
 package com.isaiasfernandes.cursomc.services;
 
-import java.util.List;
-import java.util.Optional;
-
+import com.isaiasfernandes.cursomc.domain.Categoria;
 import com.isaiasfernandes.cursomc.dto.CategoriaDTO;
+import com.isaiasfernandes.cursomc.repositories.CategoriaRepository;
 import com.isaiasfernandes.cursomc.services.exceptions.DataIntegrityException;
+import com.isaiasfernandes.cursomc.services.exceptions.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
@@ -12,9 +12,8 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import com.isaiasfernandes.cursomc.domain.Categoria;
-import com.isaiasfernandes.cursomc.repositories.CategoriaRepository;
-import com.isaiasfernandes.cursomc.services.exceptions.ObjectNotFoundException;
+import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CategoriaService {

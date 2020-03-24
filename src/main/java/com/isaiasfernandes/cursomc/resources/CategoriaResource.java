@@ -1,19 +1,16 @@
 package com.isaiasfernandes.cursomc.resources;
 
 
+import com.isaiasfernandes.cursomc.domain.Categoria;
 import com.isaiasfernandes.cursomc.dto.CategoriaDTO;
-import com.sun.jndi.toolkit.url.Uri;
+import com.isaiasfernandes.cursomc.services.CategoriaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import com.isaiasfernandes.cursomc.domain.Categoria;
-import com.isaiasfernandes.cursomc.services.CategoriaService;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.validation.Valid;
-import javax.xml.ws.Response;
 import java.net.URI;
 import java.util.List;
 import java.util.stream.Collectors;

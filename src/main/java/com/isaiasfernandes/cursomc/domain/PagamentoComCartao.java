@@ -1,8 +1,8 @@
 package com.isaiasfernandes.cursomc.domain;
 
-import javax.persistence.Entity;
-
 import com.isaiasfernandes.cursomc.domain.enums.EstadoPagamento;
+
+import javax.persistence.Entity;
 
 @Entity
 public class PagamentoComCartao extends Pagamento{

@@ -1,18 +1,10 @@
 package com.isaiasfernandes.cursomc.domain;
 
-import java.io.Serializable;
-
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
-import javax.persistence.JoinColumn;
-import javax.persistence.MapsId;
-import javax.persistence.OneToOne;
-
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.isaiasfernandes.cursomc.domain.enums.EstadoPagamento;
+
+import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Inheritance(strategy=InheritanceType.JOINED)

@@ -1,26 +1,25 @@
 package com.isaiasfernandes.cursomc.services;
 
-import java.util.List;
-import java.util.Optional;
-
 import com.isaiasfernandes.cursomc.domain.Cidade;
+import com.isaiasfernandes.cursomc.domain.Cliente;
 import com.isaiasfernandes.cursomc.domain.Endereco;
 import com.isaiasfernandes.cursomc.domain.enums.TipoCliente;
 import com.isaiasfernandes.cursomc.dto.ClienteDTO;
 import com.isaiasfernandes.cursomc.dto.ClienteNewDTO;
+import com.isaiasfernandes.cursomc.repositories.ClienteRepository;
 import com.isaiasfernandes.cursomc.repositories.EnderecoRepository;
 import com.isaiasfernandes.cursomc.services.exceptions.DataIntegrityException;
+import com.isaiasfernandes.cursomc.services.exceptions.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-
-import com.isaiasfernandes.cursomc.domain.Cliente;
-import com.isaiasfernandes.cursomc.repositories.ClienteRepository;
-import com.isaiasfernandes.cursomc.services.exceptions.ObjectNotFoundException;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ClienteService {

@@ -1,11 +1,10 @@
 package com.isaiasfernandes.cursomc.domain;
 
-import java.util.Date;
-
-import javax.persistence.Entity;
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.isaiasfernandes.cursomc.domain.enums.EstadoPagamento;
+
+import javax.persistence.Entity;
+import java.util.Date;
 
 @Entity
 public class PagamentoComBoleto extends Pagamento {

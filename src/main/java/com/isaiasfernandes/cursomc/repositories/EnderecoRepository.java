@@ -1,9 +1,8 @@
 package com.isaiasfernandes.cursomc.repositories;
 
+import com.isaiasfernandes.cursomc.domain.Endereco;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-
-import com.isaiasfernandes.cursomc.domain.Endereco;
 
 @Repository
 public interface EnderecoRepository extends JpaRepository<Endereco, Integer>{
