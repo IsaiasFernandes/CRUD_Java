@@ -1,6 +1,7 @@
 package com.isaiasfernandes.cursomc.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.isaiasfernandes.cursomc.domain.enums.EstadoPagamento;
 
 import javax.persistence.*;
@@ -8,6 +9,7 @@ import java.io.Serializable;
 
 @Entity
 @Inheritance(strategy=InheritanceType.JOINED)
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "@type")
 public class Pagamento implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -36,6 +38,14 @@ public class Pagamento implements Serializable {
 
 	public void setId(Integer id) {
 		this.id = id;
+	}
+
+	public EstadoPagamento getEstado() {
+		return EstadoPagamento.toEnum(estado);
+	}
+
+	public void setEstado(EstadoPagamento estado) {
+		this.estado = estado.getCod();
 	}
 
 	public EstadoPagamento getPagamento() {
